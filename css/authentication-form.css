@@ -39,6 +39,49 @@ form {
   width: 100%;
 }
 
+.form-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-input-control {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.content {
+  display: flex;
+  gap: 50px;
+}
+
+#sign-in, #sign-in-form, #sign-up, #sign-up-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#sign-in-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border: 1px solid black;
+}
+
+.form-checkbox-control {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.form-submit-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
 a {
   color: #335eea;
   text-decoration: none;
@@ -48,10 +91,49 @@ label {
   font-weight: bold;
 }
 
+label[for="stay-signed-in"],
+label[for="male"],
+label[for="female"],
+label[for="other"] {
+  font-weight: normal;
+}
+
+#state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+  text-align: center;
+  text-align-last: center;
+  padding: 5px;
+}
+
 input {
   width: 100%;
   height: 30px;
   padding: 5px;
+}
+
+.form-group-horizontal-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.form-group-horizontal-control > * {
+  flex: 0 0 48%;
+}
+
+.form-group-horizontal-control select {
+  width: 100%;
+}
+
+.form-group-vertical-control {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 input[type="checkbox"],
@@ -60,6 +142,8 @@ input[type="radio"] {
   height: max-content;
   padding: 0;
 }
+
+
 
 input[type="submit"] {
   width: unset;
