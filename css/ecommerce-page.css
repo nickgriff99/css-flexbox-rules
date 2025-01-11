@@ -37,9 +37,16 @@ section {
 }
 
 .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
 }
 
 .logo-search {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .logo {
@@ -54,6 +61,8 @@ section {
   background: #1f1f27;
   padding: 10px 20px;
   border-radius: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .search-bar input {
@@ -71,22 +80,35 @@ section {
 }
 
 .options {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
 
 .option {
   min-width: 60px;
   text-transform: capitalize;
   cursor: pointer;
+  display: flex;
+  gap: 5px;
 }
+
+
 
 .option i {
   font-size: 20px;
   color: #d5ef9a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .categories {
   background-color: #2b2d36;
   padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .category {
@@ -108,9 +130,14 @@ section {
   background-color: #d5ef9a;
   border: 1px solid #d5ef9a;
   color: #1f1f27;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .view-options {
+  display: flex;
+  gap: 20px;
 }
 
 i.fa-th-list {
@@ -120,6 +147,8 @@ i.fa-th-list {
 .section-control {
   padding-bottom: 20px;
   border-bottom: 1px solid #8d8ba5;
+  display: flex;
+  justify-content: space-between;
 }
 
 .section-control .view-option {
@@ -127,6 +156,9 @@ i.fa-th-list {
   height: 40px;
   border: 1px solid #8d8ba5;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .products {
@@ -182,11 +214,18 @@ i.fa-th-list {
 /* GRID VIEW STYLES */
 
 .grid.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .grid .product {
   width: 300px;
   padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: nowrap;
 }
 
 .grid .product-image-wrapper {
@@ -202,18 +241,45 @@ i.fa-th-list {
   padding: 0 20px 30px;
 }
 
+.product-info {
+  height: 80%;
+}
+
 .grid .product-action {
   padding-top: 30px;
   border-top: 1px solid #8d8ba5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.product-name {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.product-action {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  align-items: center;
 }
 
 /* LINE VIEW STYLES */
 
 .lines.products {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .lines .product {
   padding: 20px;
+  display: flex;
+  gap: 20px;
+  height: 100%;
 }
 
 .lines .product-image-wrapper {
@@ -221,36 +287,105 @@ i.fa-th-list {
   height: 200px;
 }
 
+.lines .product-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .lines .product-data {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
 }
 
 .lines .product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  padding: 10px;
+}
+
+.lines .product-name {
+  padding: 0px;
+}
+
+.lines .product-description {
+  padding-top: 10px;
 }
 
 .lines .product-action {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
 }
+
+
 
 /* LINES-ACTION VIEW */
 
 .lines-action.products {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .lines-action .product {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  height: 100%;
 }
 
 .lines-action .product-image-wrapper {
   min-width: 300px;
   height: 200px;
+  object-fit: cover;
 }
 
 .lines-action .product-data {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
 }
 
 .lines-action .product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  height: 100%;
+}
+
+.lines-action .product-description {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 380px;
 }
 
 .lines-action .product-action {
   border-left: 1px solid #8d8ba5;
   padding-left: 30px;
   min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 200px;
+  gap: 25px;
+}
+
+.lines-action .product-name {
+  padding: 0px;
 }
